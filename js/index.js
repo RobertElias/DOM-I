@@ -43,15 +43,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //Navbar Selector
-
 const navBar = document.querySelector('nav');
 
 const navATag = document.querySelectorAll('a');
 navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
-  item.style.color = 'silver';
+  item.style.color = 'green';
 })
-//Add new content
+
+
+//New changes
+
+let newNavTag = document.createElement('a');
+newNavTag.textContent = 'Blog';
+
+let newNavBar = document.querySelector('nav');
+newNavBar.appendChild(newNavTag);
+newNavTag.style.color = "green";
+
+
+const newContent = document.createElement('footer');
+newContent.textContent = "Website Made By Robert Elias";
+const parentElement = document.querySelector('body');
+parentElement.prepend(newContent);
 
 
 //testing for navBar
@@ -110,3 +124,8 @@ address.innerHTML= "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-88
 //CopyRight contents
 const copyRight = document.querySelector('footer');
 copyRight.textContent = siteContent['footer']['copyright'];
+
+
+
+
+
