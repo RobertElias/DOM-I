@@ -48,7 +48,7 @@ const navBar = document.querySelector('nav');
 
 const navATag = document.querySelectorAll('a');
 navATag.forEach(function(item, index){
-  item.innerText = siteContent['nav']['nav-item-${index + 1}'];
+  item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
   item.style.color = 'silver';
 })
 
@@ -62,3 +62,13 @@ ctaText1.innerHTML = "DOM <br> Is<br> Awesome<br>";
 // cta-text button
 const Button = document.querySelector('.cta-text button');
 Button.textContent = siteContent['cta']['button'];
+
+// Features and About h4 
+const contentTopH4 = document.querySelectorAll('.top-content .text-content h4');
+contentTopH4[0].textContent = siteContent['main-content']['features-h4'];
+contentTopH4[1].textContent = siteContent['main-content']['about-h4'];
+
+// Features and About on Top Content Area
+const contentTopP = document.querySelectorAll('.top-content .text-content p');
+contentTopP[0].textContent = siteContent['main-content']['features-content'];
+contentTopP[1].textContent = siteContent['main-content']['about-content'];
