@@ -51,6 +51,8 @@ navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
   item.style.color = 'silver';
 })
+//Add new content
+
 
 //testing for navBar
 console.log(navBar);
@@ -62,6 +64,12 @@ ctaText1.innerHTML = "DOM <br> Is<br> Awesome<br>";
 // cta-text button
 const Button = document.querySelector('.cta-text button');
 Button.textContent = siteContent['cta']['button'];
+
+// Updated images for cta
+let cta = document.getElementById("cta-img");;
+cta.setAttribute('src', siteContent["cta"]["img-src"] );
+
+
 
 // Features and About h4 
 const contentTopH4 = document.querySelectorAll('.top-content .text-content h4');
@@ -98,3 +106,7 @@ contactH4.textContent  = siteContent['contact']['contact-h4'];
 //Update address to cta-text
 let address = document.querySelector('.contact p');
 address.innerHTML= "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-8888<br><br> sales@greatidea.io";
+
+//CopyRight contents
+const copyRight = document.querySelector('footer');
+copyRight.textContent = siteContent['footer']['copyright'];
