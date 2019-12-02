@@ -126,6 +126,16 @@ let newNavBar1 = document.querySelector('nav');
 newNavBar1.prepend(newNavTag1);
 newNavTag1.style.color = "green";
 
+//Stretch updating styles
+
+const para = document.querySelectorAll('.text-content');
+
+para.forEach( element => {
+ element.style.backgroundColor = "DarkOliveGreen";
+ element.style.color = "gold";
+})
+
+
 
 
 
