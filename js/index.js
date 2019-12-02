@@ -89,3 +89,12 @@ const contentBottomP = document.querySelectorAll('.bottom-content .text-content 
 contentBottomP[0].textContent = siteContent['main-content']['services-content'];
 contentBottomP[1].textContent = siteContent['main-content']['product-content'];
 contentBottomP[2].textContent = siteContent['main-content']['vision-content'];
+
+//Features for contact h4
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent  = siteContent['contact']['contact-h4'];
+
+
+//Update address to cta-text
+let address = document.querySelector('.contact p');
+address.innerHTML= "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-8888<br><br> sales@greatidea.io";
