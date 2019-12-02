@@ -53,22 +53,6 @@ navATag.forEach(function(item, index){
 })
 
 
-//Add new content
-
-let newNavTag = document.createElement('a');
-newNavTag.textContent = 'Blog';
-
-let newNavBar = document.querySelector('nav');
-newNavBar.appendChild(newNavTag);
-newNavTag.style.color = "green";
-
-let newNavTag1 = document.createElement('a');
-newNavTag1.textContent = 'Order';
-
-let newNavBar1 = document.querySelector('nav');
-newNavBar1.prepend(newNavTag1);
-newNavTag1.style.color = "green";
-
 //testing for navBar
 console.log(navBar);
 
@@ -126,6 +110,21 @@ address.innerHTML= "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-88
 const copyRight = document.querySelector('footer');
 copyRight.textContent = siteContent['footer']['copyright'];
 
+//Add new content
+
+let newNavTag = document.createElement('a');
+newNavTag.textContent = 'Blog';
+
+let newNavBar = document.querySelector('nav');
+newNavBar.appendChild(newNavTag);
+newNavTag.style.color = "green";
+
+let newNavTag1 = document.createElement('a');
+newNavTag1.textContent = 'Order';
+
+let newNavBar1 = document.querySelector('nav');
+newNavBar1.prepend(newNavTag1);
+newNavTag1.style.color = "green";
 
 
 
