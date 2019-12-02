@@ -49,10 +49,11 @@ const navATag = document.querySelectorAll('a');
 navATag.forEach(function(item, index){
   item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
   item.style.color = 'green';
+  
 })
 
 
-//New changes
+//Add new content
 
 let newNavTag = document.createElement('a');
 newNavTag.textContent = 'Blog';
@@ -61,12 +62,12 @@ let newNavBar = document.querySelector('nav');
 newNavBar.appendChild(newNavTag);
 newNavTag.style.color = "green";
 
+let newNavTag1 = document.createElement('a');
+newNavTag1.textContent = 'Order';
 
-const newContent = document.createElement('footer');
-newContent.textContent = "Website Made By Robert Elias";
-const parentElement = document.querySelector('body');
-parentElement.prepend(newContent);
-
+let newNavBar1 = document.querySelector('nav');
+newNavBar1.prepend(newNavTag1);
+newNavTag1.style.color = "green";
 
 //testing for navBar
 console.log(navBar);
