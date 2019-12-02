@@ -58,3 +58,7 @@ console.log(navBar);
 //Updates for cta-img
 let ctaText1 = document.querySelector('.cta h1');
 ctaText1.innerHTML = "DOM <br> Is<br> Awesome<br>";
+
+// cta-text button
+const Button = document.querySelector('.cta-text button');
+Button.textContent = siteContent['cta']['button'];
