@@ -40,3 +40,102 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//Navbar Selector
+const navBar = document.querySelector('nav');
+
+const navATag = document.querySelectorAll('a');
+navATag.forEach(function(item, index){
+  item.innerText = siteContent['nav'][`nav-item-${index + 1}`];
+  item.style.color = 'green';
+  
+})
+
+
+//testing for navBar
+console.log(navBar);
+
+//Updates for cta-img
+let ctaText1 = document.querySelector('.cta h1');
+ctaText1.innerHTML = "DOM <br> Is<br> Awesome<br>";
+
+// cta-text button
+const Button = document.querySelector('.cta-text button');
+Button.textContent = siteContent['cta']['button'];
+
+// Updated images for cta
+let cta = document.getElementById("cta-img");;
+cta.setAttribute('src', siteContent["cta"]["img-src"] );
+
+
+
+// Features and About h4 
+const contentTopH4 = document.querySelectorAll('.top-content .text-content h4');
+contentTopH4[0].textContent = siteContent['main-content']['features-h4'];
+contentTopH4[1].textContent = siteContent['main-content']['about-h4'];
+
+// Features and About on Top Content Area
+const contentTopP = document.querySelectorAll('.top-content .text-content p');
+contentTopP[0].textContent = siteContent['main-content']['features-content'];
+contentTopP[1].textContent = siteContent['main-content']['about-content'];
+
+// Update images for middle-img-src
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//features  & about h4 for bottom contents
+const contentBottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
+contentBottomH4[0].textContent = siteContent['main-content']['services-h4'];
+contentBottomH4[1].textContent = siteContent['main-content']['product-h4'];
+contentBottomH4[2].textContent = siteContent['main-content']['vision-h4'];
+
+
+//features  & about P for bottom contents
+const contentBottomP = document.querySelectorAll('.bottom-content .text-content p');
+contentBottomP[0].textContent = siteContent['main-content']['services-content'];
+contentBottomP[1].textContent = siteContent['main-content']['product-content'];
+contentBottomP[2].textContent = siteContent['main-content']['vision-content'];
+
+//Features for contact h4
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent  = siteContent['contact']['contact-h4'];
+
+
+//Update address to cta-text
+let address = document.querySelector('.contact p');
+address.innerHTML= "123 Way 456 Street<br> Somewhere, USA<br><br> 1 (888) 888-8888<br><br> sales@greatidea.io";
+
+//CopyRight contents
+const copyRight = document.querySelector('footer');
+copyRight.textContent = siteContent['footer']['copyright'];
+
+//Add new content
+
+let newNavTag = document.createElement('a');
+newNavTag.textContent = 'Blog';
+
+let newNavBar = document.querySelector('nav');
+newNavBar.appendChild(newNavTag);
+newNavTag.style.color = "green";
+
+let newNavTag1 = document.createElement('a');
+newNavTag1.textContent = 'Order';
+
+let newNavBar1 = document.querySelector('nav');
+newNavBar1.prepend(newNavTag1);
+newNavTag1.style.color = "green";
+
+//Stretch updating styles
+
+const para = document.querySelectorAll('.text-content');
+
+para.forEach( element => {
+ element.style.backgroundColor = "DarkOliveGreen";
+ element.style.color = "gold";
+})
+
+
+
+
+
